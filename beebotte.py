@@ -34,7 +34,7 @@ def get_luminosity():
     visible = full_spectrum - infrared
     return visible
 
-# The main part. Get the data from the sensors, then sent it to your Beebotte channel.
+# The main part. Get the data from the sensors, then send it to your Beebotte channel.
 def run():
   while True:
     temperature, pressure, humidity = bme280.readBME280All()
