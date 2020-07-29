@@ -6,9 +6,6 @@ import smbus
 import sys
 from beebotte import *
 
-# Set up the I2C bus for the TSL2561 sensor
-bus = smbus.SMBus(1)
-
 # Replace CHANNEL_TOKEN with that of your Beebotte channel and YOUR_CHANNEL_NAME with the name you give your Beebotte channel
 bbt = BBT(token = 'CHANNEL_TOKEN')
 chanName = "YOUR_CHANNEL_NAME"
@@ -17,10 +14,13 @@ chanName = "YOUR_CHANNEL_NAME"
 period = 900
 
 # These resources needed to be added to your Beebotte channel - make sure the channel resource names match!
-temperature_resource   = Resource(bbt, chanName, 'temperature')
+temperature_resource = Resource(bbt, chanName, 'temperature')
 humidity_resource = Resource(bbt, chanName, 'humidity')
 pressure_resource = Resource(bbt, chanName, 'pressure')
 luminosity_resource = Resource(bbt, chanName, 'luminosity')
+
+# Set up the I2C bus for the TSL2561 sensor
+bus = smbus.SMBus(1)
 
 # Read the luminosity data from the TSl2561 sensor
 def get_luminosity():
