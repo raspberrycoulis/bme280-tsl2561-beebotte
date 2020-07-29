@@ -41,10 +41,10 @@ def run():
     luminosity = get_luminosity()
     if temperature is not None and humidity is not None and pressure is not None and luminosity is not None:
         try:
-          temperature_resource.write(temperature)
-          humidity_resource.write(humidity)
-          pressure_resource.write(pressure)
-          luminosity_resource.write(luminosity)
+          temperature_resource.write(round(temperature,1))
+          humidity_resource.write(round(humidity,0))
+          pressure_resource.write(round(pressure,0))
+          luminosity_resource.write(round(luminosity,0))
         except Exception:
           print ("Error while writing to Beebotte")
     else:
