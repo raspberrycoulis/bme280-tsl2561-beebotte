@@ -18,7 +18,7 @@ If you get a warning, you may need to install PIP first, which is done by:
 Simply clone this script by running:
 
     cd ~
-    sudo git clone https://github.com/raspberrycoulis/bme280-tsl2561-beebotte.git
+    git clone https://github.com/raspberrycoulis/bme280-tsl2561-beebotte.git
 
 Then you will need to provide your channel token and set your channel name to match the new channel you create in Beebotte:
 
