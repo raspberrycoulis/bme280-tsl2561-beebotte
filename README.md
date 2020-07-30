@@ -28,7 +28,7 @@ Then you will need to provide your channel token and set your channel name to ma
 
 You can use your preferred text editor, but Nano works just fine:
 
-    sudo nano /home/pi/bme280-tsl2561-beebotte/dashboard.py
+    nano /home/pi/bme280-tsl2561-beebotte/dashboard.py
 
 Be sure to save when exiting:
 
@@ -37,7 +37,7 @@ Be sure to save when exiting:
 
 Make the script executable:
 
-    sudo chmod +x dashboard.py
+    chmod +x dashboard.py
 
 And then finally test it by running:
 
